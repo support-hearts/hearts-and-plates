@@ -104,19 +104,19 @@ const SITE_CONFIG = {
                 name: "Fine Dining",
                 icon: "fas fa-utensils",
                 description: "Experience culinary artistry in our elegant dining space",
-                page: "_pages/menu.html"
+                page: "pages/menu.html"
             },
             {
                 name: "Birthday Celebrations",
                 icon: "fas fa-birthday-cake",
                 description: "Make your special day extraordinary with our dedicated hall",
-                page: "_pages/birthday.html"
+                page: "pages/birthday.html"
             },
             {
                 name: "Corporate Events",
                 icon: "fas fa-handshake",
                 description: "Professional event management for business needs",
-                page: "_pages/corporate.html"
+                page: "pages/corporate.html"
             }
         ],
         

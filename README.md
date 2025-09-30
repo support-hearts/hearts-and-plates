@@ -17,11 +17,11 @@ A modern, responsive website for Hearts and Plates Restaurant in Pondicherry, fe
 2. Update your details in `config/site-config.js`
 3. Add your images to the appropriate folders
 4. Set up Google Forms and update URLs
-5. Deploy to GitHub _pages or your hosting provider
+5. Deploy to GitHub pages or your hosting provider
 
 ## 📁 Structure
 ├── index.html              # Homepage
-├── _pages/                  # Additional _pages
+├── pages/                  # Additional pages
 ├── assets/                 # CSS, JS, Images
 ├── config/                 # Site configuration
 └── docs/                   # Documentation
