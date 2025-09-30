@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catering Service | Hearts & Plates</title>
+    <meta name="description" content="Premium catering across Pondicherry for weddings, corporate events, house parties, and festivals.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <style>
+        /* Page-specific styles */
+        .page-header {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 6rem 3rem 3rem;
+            text-align: center;
+        }
+        
+        .page-subtitle {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        .page-title {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .page-description {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .catering-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem 4rem;
+        }
+        
+        .info-boxes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .info-box {
+            background: var(--white);
+            border: 1px solid var(--border-gray);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+        
+        .info-box h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .info-box ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .info-box li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .info-box li::before {
+            content: "• ";
+            color: var(--primary);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .service-areas {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-areas h4 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        
+        .areas-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        
+        .area-tag {
+            padding: 0.4rem 0.9rem;
+            background: var(--white);
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: var(--text-primary);
+        }
+        
+        .packages-section {
+            margin-bottom: 3rem;
+        }
+        
+        .packages-section h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .package-card {
+            background: var(--white);
+            border: 1px solid var(--border-gray);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .package-card h4 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .package-price {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .package-card .btn {
+            width: 100%;
+            justify-content: center;
+        }
+        
+        .quote-section {
+            background: var(--white);
+            border: 1px solid var(--border-gray);
+            border-radius: 12px;
+            padding: 3rem;
+            text-align: center;
+        }
+        
+        .quote-section h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .quote-section p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+        }
+        
+        .quote-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .form-group {
+            text-align: left;
+        }
+        
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem;
+            border: 1px solid var(--border-gray);
+            border-radius: 6px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        @media (max-width: 1024px) {
+            .info-boxes {
+                grid-template-columns: 1fr;
+            }
+            
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 5rem 1.5rem 2rem;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .catering-section {
+                padding: 0 1.5rem 3rem;
+            }
+            
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .quote-section {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-circle"></div>
+                Hearts & Plates
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="birthday.html">Party Halls</a></li>
+                <li><a href="corporate.html">Catering</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <p class="page-subtitle">Outdoor & Onsite</p>
+        <h1 class="page-title">Catering Service</h1>
+        <p class="page-description">
+            Premium catering across Pondicherry for weddings, corporate events, house parties, and festivals.
+        </p>
+    </section>
+
+    <!-- Catering Section -->
+    <section class="catering-section">
+        <div class="info-boxes">
+            <div class="info-box">
+                <h3>Menu Highlights</h3>
+                <ul>
+                    <li>South Indian Banana Leaf Meals</li>
+                    <li>North Indian Thali & Tandoor</li>
+                    <li>Indo-Chinese Live Stations</li>
+                    <li>Dessert Bar & Beverages</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>Service Areas</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">
+                    We cover most neighborhoods in Pondicherry:
+                </p>
+                <div class="service-areas">
+                    <div class="areas-list">
+                        <span class="area-tag">Pondicherry</span>
+                        <span class="area-tag">Karaikal</span>
+                        <span class="area-tag">T. Nagar</span>
+                        <span class="area-tag">Velachery</span>
+                        <span class="area-tag">Adyar</span>
+                        <span class="area-tag">Anna Nagar</span>
+                        <span class="area-tag">OMR</span>
+                        <span class="area-tag">ECR</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h3>Packages</h3>
+                <div style="margin-bottom: 1.5rem;">
+                    <h4 style="font-weight: 600; margin-bottom: 0.5rem;">Silver (₹550/head)</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">For small gatherings</p>
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <h4 style="font-weight: 600; margin-bottom: 0.5rem;">Gold (₹850/head)</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Popular choice</p>
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <h4 style="font-weight: 600; margin-bottom: 0.5rem;">Platinum (₹1200/head)</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Premium spread</p>
+                </div>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 1.5rem;">
+                    <strong>Custom Menu:</strong> Get a tailored quote
+                </p>
+            </div>
+        </div>
+
+        <!-- Request Quote Section -->
+        <div class="quote-section">
+            <h2>Request a Quote</h2>
+            <p>Share your date, guest count, and preferences. We'll craft a tailored package for your event.</p>
+            
+            <form class="quote-form" id="cateringForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="e.g. +91 98765 43210" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="package">Package</label>
+                        <select id="package" name="package" required>
+                            <option value="">Select a package</option>
+                            <option value="silver">Silver (₹550/head)</option>
+                            <option value="gold">Gold (₹850/head)</option>
+                            <option value="platinum">Platinum (₹1200/head)</option>
+                            <option value="custom">Custom Menu</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Guests</label>
+                        <input type="number" id="guests" name="guests" placeholder="e.g. 150" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Event Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="details">Event Details</label>
+                        <textarea id="details" name="details" placeholder="Date, venue, cuisines, and any preferences"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Hearts & Plates</h4>
+                <p>Multi-cuisine restaurant in the heart of Pondicherry.</p>
+                <p style="margin-top: 1rem;">51 B, First Floor<br>Mission Street, Pondicherry</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/hearts_and_plates" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://g.page/r/CZ8rOB4VQ65-EAE/review" aria-label="Google">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="https://wa.me/917305207180" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Hours</h4>
+                <p>Mon-Fri: 12:00 PM – 11:00 PM</p>
+                <p>Sat-Sun: 11:30 AM – 11:30 PM</p>
+                <p><em>"We are closed on Tuesdays"</em></p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Phone: +91 7305207180</p>
+                <p>Email: support@hearts-and-plates.com</p>
+                <p><a href="https://www.google.com/maps/place/Hearts+and+Plates+Restaurant/@11.939465,79.8293721,17z/data=!3m1!4b1!4m6!3m5!1s0x3a53634e21b369df:0x7eae43151e382b9f!8m2!3d11.9394598!4d79.831947!16s%2Fg%2F11yg1wk8qq?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Get Directions</a></p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2025 Hearts & Plates. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/navigation.js"></script>
+    <script>
+        // Form submission handling
+        document.getElementById('cateringForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+            
+            // You can integrate with your backend here
+            console.log('Form submitted:', data);
+            
+            // Show success message (you can customize this)
+            alert('Thank you! We\'ll contact you within 24 hours to discuss your catering needs.');
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>

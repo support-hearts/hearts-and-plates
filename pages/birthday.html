@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Halls in Pondicherry | Hearts & Plates</title>
+    <meta name="description" content="Elegant, fully-equipped venues for birthdays, engagements, corporate meets, and family gatherings at Hearts & Plates.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css">
+    
+    <style>
+        /* Page-specific styles */
+        .page-header {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 6rem 3rem 3rem;
+            text-align: center;
+        }
+        
+        .page-subtitle {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        .page-title {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .page-description {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .halls-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem 4rem;
+        }
+        
+        .halls-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .hall-card {
+            background: var(--white);
+            border: 1px solid var(--border-gray);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .hall-card-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .hall-card-content {
+            padding: 2rem;
+        }
+        
+        .hall-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hall-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hall-feature-tag {
+            padding: 0.4rem 0.9rem;
+            background: var(--light-gray);
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        
+        .hall-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .hall-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 1px solid var(--border-gray);
+        }
+        
+        .btn-outline:hover {
+            background: var(--light-gray);
+        }
+        
+        .info-boxes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .info-box {
+            background: var(--white);
+            border: 1px solid var(--border-gray);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+        
+        .info-box h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .info-box ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .info-box li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .info-box li::before {
+            content: "• ";
+            color: var(--primary);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .info-box p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .contact-buttons .btn {
+            flex: 1;
+            justify-content: center;
+        }
+        
+        @media (max-width: 1024px) {
+            .halls-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .info-boxes {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .page-header {
+                padding: 5rem 1.5rem 2rem;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .halls-section {
+                padding: 0 1.5rem 3rem;
+            }
+            
+            .hall-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-circle"></div>
+                Hearts & Plates
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="birthday.html">Party Halls</a></li>
+                <li><a href="corporate.html">Catering</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <p class="page-subtitle">Events & Celebrations</p>
+        <h1 class="page-title">Party Halls in Pondicherry</h1>
+        <p class="page-description">
+            Elegant, fully-equipped venues for birthdays, engagements, corporate meets, and family gatherings.
+        </p>
+    </section>
+
+    <!-- Halls Section -->
+    <section class="halls-section">
+        <div class="halls-grid">
+            <!-- Marina Hall -->
+            <div class="hall-card">
+                <img src="../assets/images/party hall.jpg" 
+                     alt="Marina Hall" 
+                     class="hall-card-image"
+                     onerror="this.style.background='linear-gradient(135deg, #1a1a1a 0%, #333 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.innerHTML='<i class=\'fas fa-building\' style=\'font-size:3rem;color:white;opacity:0.3;\'></i>';">
+                <div class="hall-card-content">
+                    <h3>Marina Hall</h3>
+                    <div class="hall-features">
+                        <span class="hall-feature-tag">Capacity: 15-25</span>
+                        <span class="hall-feature-tag">Stage</span>
+                        <span class="hall-feature-tag">Event Support</span>
+                    </div>
+                    <p class="hall-description">
+                        Perfect for receptions and milestone celebrations. Customizable décor and curated menus.
+                    </p>
+                    <div class="hall-buttons">
+                        <a href="tel:+917305207180" class="btn btn-primary">Call to Book</a>
+                        <a href="mailto:events@heartsandplates.in" class="btn btn-outline">Email Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mylapore Hall -->
+            <div class="hall-card">
+                <img src="../assets/images/gallery/birthday-hall.jpg" 
+                     alt="Mylapore Hall" 
+                     class="hall-card-image"
+                     onerror="this.style.background='linear-gradient(135deg, #1a1a1a 0%, #333 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.innerHTML='<i class=\'fas fa-building\' style=\'font-size:3rem;color:white;opacity:0.3;\'></i>';">
+                <div class="hall-card-content">
+                    <h3>Hall 2</h3>
+                    <div class="hall-features">
+                        <span class="hall-feature-tag">Capacity: 25-45</span>
+                        <span class="hall-feature-tag">Green Room</span>
+                        <span class="hall-feature-tag">Catering Onsite</span>
+                    </div>
+                    <p class="hall-description">
+                        Ideal for intimate gatherings, corporate offsites, and family events with premium service.
+                    </p>
+                    <div class="hall-buttons">
+                        <a href="tel:+917305207180" class="btn btn-primary">Call to Book</a>
+                        <a href="mailto:events@heartsandplates.in" class="btn btn-outline">Email Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Info Boxes -->
+        <div class="info-boxes">
+            <div class="info-box">
+                <h3>Amenities</h3>
+                <ul>
+                    <li>Professional sound system & wireless mics</li>
+                    <li>Custom décor & floral arrangements</li>
+                    <li>Dedicated event manager</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>Food & Beverage</h3>
+                <ul>
+                    <li>South Indian, North Indian, Chinese, Continental</li>
+                    <li>Pure veg and non-veg menus</li>
+                    <li>Live counters and dessert stations</li>
+                    <li>Mocktails and beverages</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>Booking Info</h3>
+                <p>Share your date, guest count, and preferences. We'll craft a tailored package for your event.</p>
+                <div class="contact-buttons">
+                    <a href="mailto:support@hearts-and-plates.com" class="btn btn-outline">support@hearts-and-plates.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Hearts & Plates</h4>
+                <p>Multi-cuisine restaurant in the heart of Pondicherry.</p>
+                <p style="margin-top: 1rem;">51 B, First Floor<br>Mission Street, Pondicherry</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/hearts_and_plates" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://g.page/r/CZ8rOB4VQ65-EAE/review" aria-label="Google">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="https://wa.me/917305207180" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Hours</h4>
+                <p>Mon-Fri: 12:00 PM – 11:00 PM</p>
+                <p>Sat-Sun: 11:30 AM – 11:30 PM</p>
+                <p><em>"We are closed on Tuesdays"</em></p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Phone: +91 7305207180</p>
+                <p>Email: support@hearts-and-plates.com</p>
+                <p><a href="https://www.google.com/maps/place/Hearts+and+Plates+Restaurant/@11.939465,79.8293721,17z/data=!3m1!4b1!4m6!3m5!1s0x3a53634e21b369df:0x7eae43151e382b9f!8m2!3d11.9394598!4d79.831947!16s%2Fg%2F11yg1wk8qq?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Get Directions</a></p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2025 Hearts & Plates. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/navigation.js"></script>
+    <script>
+        // Simple cuisine tab functionality
+        document.querySelectorAll('.cuisine-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.cuisine-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

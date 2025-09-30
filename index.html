@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hearts & Plates | Fine Dining in Pondicherry</title>
+    <meta name="description" content="Experience luxury dining at Hearts and Plates Restaurant in Pondicherry. Exquisite cuisine, elegant ambiance, and unforgettable memories await.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/icons/favicon.ico">
+    
+    <style>
+        /* Hero Section Fix - Remove overlap and match Madras Masala style */
+        .hero {
+            margin-top: 70px; /* Space for fixed navbar */
+            height: 500px;
+            min-height: 500px;
+            max-height: 500px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+
+            /* NEW: match width of second section */
+            max-width: 1400px; /* adjust to match your second section */
+            margin-left: auto;
+            margin-right: auto;
+            }
+        
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 3rem;
+            max-width: 600px;
+        }
+        
+        .hero-location {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: white;
+            margin-bottom: 1.5rem;
+            width: fit-content;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+        
+        .hero-description {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero {
+                margin-top: 60px;
+                height: 450px;
+                min-height: 450px;
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+                border-radius: 12px;
+            }
+            
+            .hero-content {
+                padding: 0 2rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-description {
+                font-size: 1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .hero-buttons .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero {
+                height: 400px;
+                min-height: 400px;
+            }
+            
+            .hero-content {
+                padding: 0 1.5rem;
+            }
+            
+            .hero-location {
+                font-size: 0.8rem;
+                padding: 0.4rem 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-circle"></div>
+                Hearts & Plates
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/birthday.html">Party Halls</a></li>
+                <li><a href="pages/corporate.html">Catering</a></li>
+                <li><a href="pages/about.html">About Us</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="assets/images/hero/restaurant-hero.jpg" 
+             alt="Hearts & Plates Restaurant" 
+             class="hero-image"
+             onerror="this.src='assets/images/gallery/dining-area.jpg'">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-location">Pondicherry • Multi-Cuisine</div>
+            <h1>Hearts & Plates</h1>
+            <p class="hero-description">
+                Authentic South Indian flavors and global favorites under one roof. Dine in, 
+                celebrate in our party halls, and let us cater your next event.
+            </p>
+            <div class="hero-buttons">
+                <a href="pages/birthday.html" class="btn btn-primary">Explore Party Halls</a>
+                <a href="pages/corporate.html" class="btn btn-secondary">Catering Service</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multi-Cuisine Specialities Section -->
+    <section class="cuisine-section">
+        <h2>Multi-Cuisine Specialities</h2>
+        <p class="cuisine-subtitle">From Chettinad to Tandoor, Indo-Chinese to Continental.</p>
+        
+        <div class="cuisine-tabs">
+            <button class="cuisine-tab active">Chettinad</button>
+            <button class="cuisine-tab">South Indian Meals</button>
+            <button class="cuisine-tab">Tandoori</button>
+            <button class="cuisine-tab">Biryani</button>
+            <button class="cuisine-tab">Indo-Chinese</button>
+            <button class="cuisine-tab">Seafood</button>
+            <button class="cuisine-tab">Desserts</button>
+        </div>
+        
+        <div class="food-grid">
+            <div class="food-item">
+                <img src="assets/images/gallery/dining-area.jpg" 
+                     alt="Cuisine 1"
+                     onerror="this.style.background='linear-gradient(135deg, #1a1a1a 0%, #333 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.innerHTML='<i class=\'fas fa-utensils\' style=\'font-size:2rem;color:white;opacity:0.3;\'></i>';">
+            </div>
+            <div class="food-item">
+                <img src="assets/images/gallery/restaurant-interior.jpg" 
+                     alt="Cuisine 2"
+                     onerror="this.style.background='linear-gradient(135deg, #1a1a1a 0%, #333 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.innerHTML='<i class=\'fas fa-utensils\' style=\'font-size:2rem;color:white;opacity:0.3;\'></i>';">
+            </div>
+            <div class="food-item">
+                <img src="assets/images/gallery/kitchen.jpg" 
+                     alt="Cuisine 3"
+                     onerror="this.style.background='linear-gradient(135deg, #1a1a1a 0%, #333 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.innerHTML='<i class=\'fas fa-utensils\' style=\'font-size:2rem;color:white;opacity:0.3;\'></i>';">
+            </div>
+            <div class="food-item">
+                <img src="assets/images/gallery/birthday-setup-1.jpg" 
+                     alt="Cuisine 4"
+                     onerror="this.style.background='linear-gradient(135deg, #1a1a1a 0%, #333 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.innerHTML='<i class=\'fas fa-utensils\' style=\'font-size:2rem;color:white;opacity:0.3;\'></i>';">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="services-grid">     
+            <div class="service-card">
+                <h3>Dine-In Experience</h3>
+                <p>Warm Ambiance, quick service and a menu celebrating traditional Indian and global.</p>
+                <a href="https://wa.me/917305207180" class="btn btn-primary">Reserve a Table</a>
+            </div>
+                  
+            <div class="service-card">
+                <h3>Party Halls</h3>
+                <p>Elegant venues with Music, Decor, and curated menus for 25-50 guests.</p>
+                <a href="pages/birthday.html" class="btn btn-primary">View Halls</a>
+            </div>
+            
+            <div class="service-card">
+                <h3>Catering Services</h3>
+                <p>Outdoor and onsite catering across Pondicherry for weddings and corporate events.</p>
+                <a href="pages/corporate.html" class="btn btn-primary">Get a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="testimonials-content">
+            <div>
+                <h3>What guests say</h3>
+                <p class="testimonial-quote">"We have visited H & P, 3 times and ordered for take away also. The food is prepared very well with the intention to be served best." — Robinson Nathan</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Hearts & Plates</h4>
+                <p>Multi-cuisine restaurant in the heart of Pondicherry.</p>
+                <p style="margin-top: 1rem;">51 B, First Floor<br>Mission Street, Pondicherry</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/hearts_and_plates" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://g.page/r/CZ8rOB4VQ65-EAE/review" aria-label="Google">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="https://wa.me/917305207180" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Hours</h4>
+                <p>Mon-Fri: 12:00 PM – 11:00 PM</p>
+                <p>Sat-Sun: 11:30 AM – 11:30 PM</p>
+                <p><em>"We are closed on Tuesdays"</em></p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Phone: +91 7305207180</p>
+                <p>Email: support@hearts-and-plates.com</p>
+                <p><a href="https://www.google.com/maps/place/Hearts+and+Plates+Restaurant/@11.939465,79.8293721,17z/data=!3m1!4b1!4m6!3m5!1s0x3a53634e21b369df:0x7eae43151e382b9f!8m2!3d11.9394598!4d79.831947!16s%2Fg%2F11yg1wk8qq?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Get Directions</a></p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2025 Hearts & Plates. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/navigation.js"></script>
+    <script>
+        // Simple cuisine tab functionality
+        document.querySelectorAll('.cuisine-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.cuisine-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
