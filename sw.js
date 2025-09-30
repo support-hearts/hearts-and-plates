@@ -10,9 +10,9 @@ const IMAGE_CACHE = `${CACHE_VERSION}-images`;
 const STATIC_ASSETS = [
     '/',
     '/index.html',
-    '/pages/about.html',
-    '/pages/birthday.html',
-    '/pages/corporate.html',
+    '/_pages/about.html',
+    '/_pages/birthday.html',
+    '/_pages/corporate.html',
     '/assets/css/main.css',
     '/assets/css/components.css',
     '/assets/css/responsive.css',

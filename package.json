@@ -6,7 +6,7 @@
     "scripts": {
       "serve": "python3 -m http.server 8000",
       "build": "echo 'No build process needed for static site'",
-      "deploy": "echo 'Deploy to GitHub Pages or your hosting provider'"
+      "deploy": "echo 'Deploy to GitHub _pages or your hosting provider'"
     },
     "keywords": [
       "restaurant",

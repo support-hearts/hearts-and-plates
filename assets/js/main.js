@@ -433,7 +433,7 @@ class RestaurantSite {
                 link.classList.add('active');
             }
             
-            // Check for section matches (e.g., birthday.html matches pages/birthday.html)
+            // Check for section matches (e.g., birthday.html matches _pages/birthday.html)
             const currentFile = currentPage.split('/').pop();
             const linkFile = linkPath.split('/').pop();
             if (currentFile === linkFile && currentFile !== '') {
