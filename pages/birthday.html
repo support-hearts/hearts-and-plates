@@ -222,9 +222,9 @@
             </a>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="pages/birthday.html">Party Halls</a></li>
-                <li><a href="pages/corporate.html">Catering</a></li>
-                <li><a href="pages/about.html">About Us</a></li>
+                <li><a href="../pages/birthday.html">Party Halls</a></li>
+                <li><a href="../pages/corporate.html">Catering</a></li>
+                <li><a href="../pages/about.html">About Us</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -365,7 +365,14 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="assets/js/navigation.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js');
+        });
+    }
+    </script>
     <script>
         // Simple cuisine tab functionality
         document.querySelectorAll('.cuisine-tab').forEach(tab => {

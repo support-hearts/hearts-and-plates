@@ -13,6 +13,7 @@ const STATIC_ASSETS = [
     '/pages/about.html',
     '/pages/birthday.html',
     '/pages/corporate.html',
+    '/offline.html',
     '/assets/css/main.css',
     '/assets/css/components.css',
     '/assets/css/responsive.css',
@@ -278,8 +279,8 @@ self.addEventListener('push', (event) => {
     const data = event.data.json();
     const options = {
         body: data.body || 'New notification from Hearts & Plates',
-        icon: '/assets/images/icons/icon-192x192.png',
-        badge: '/assets/images/icons/badge-72x72.png',
+        icon: '/assets/images/icons/apple-touch-icon.png',
+        badge: '/assets/images/icons/apple-touch-icon.png',
         vibrate: [200, 100, 200],
         data: data.url || '/'
     };

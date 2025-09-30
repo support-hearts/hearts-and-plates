@@ -284,9 +284,9 @@
             </a>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="pages/birthday.html">Party Halls</a></li>
-                <li><a href="pages/corporate.html">Catering</a></li>
-                <li><a href="pages/about.html">About Us</a></li>
+                <li><a href="../pages/birthday.html">Party Halls</a></li>
+                <li><a href="../pages/corporate.html">Catering</a></li>
+                <li><a href="../pages/about.html">About Us</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -433,7 +433,7 @@
                 <h4>Contact</h4>
                 <p>Phone: +91 7305207180</p>
                 <p>Email: support@hearts-and-plates.com</p>
-                <p><a href="https://www.google.com/maps/place/Hearts+and+Plates+Restaurant/@11.939465,79.8293721,17z/data=!3m1!4b1!4m6!3m5!1s0x3a53634e21b369df:0x7eae43151e382b9f!8m2!3d11.9394598!4d79.831947!16s%2Fg%2F11yg1wk8qq?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Get Directions</a></p>
+                <p><a href="https://www.google.com/maps/place/Hearts+and+Plates+Restaurant/@11.939465,79.8293721,17z/data=!3m1!4b1!4m6!3m5!1s0x3a53634e21b369df:0x7eae43151e382b9f!8m2!3d11.9394598!4d79.831947!16s%2Fg%2F11yg1wk8qq?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Get Directions</a></p>
             </div>
         </div>
         
@@ -444,6 +444,13 @@
 
     <!-- JavaScript -->
     <script src="../assets/js/navigation.js"></script>
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js');
+        });
+    }
+    </script>
     <script>
         // Form submission handling
         document.getElementById('cateringForm').addEventListener('submit', function(e) {
